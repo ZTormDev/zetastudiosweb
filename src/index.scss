@@ -1,0 +1,48 @@
+$background-dark: #0d0913;
+$text-color: black;
+
+#root {
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik";
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+button,
+a,
+input,
+form,
+textarea {
+  font-family: "Rubik";
+}

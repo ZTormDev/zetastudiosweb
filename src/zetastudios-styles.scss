@@ -1,0 +1,313 @@
+.zetastudios-page {
+  // Variables
+  $primary-color: #6a5acd;
+  $primary-light-color: #ac9fff;
+  $primary-dark-color: #5c4fb1;
+  $secondary-color: #695acd;
+  $accent-color: #8370ff;
+
+  $white-color: #ffffff;
+  $background-dark: #0d0913;
+  $text-color: black;
+
+  background-color: $background-dark;
+
+  header {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: 0 0 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 100px #695acd75;
+    width: 100%;
+    margin: 0;
+
+    .slogan {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      margin: 1rem 0 0.4rem;
+      position: relative;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        li {
+          a {
+            color: $white-color;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding: 0.5rem 2rem;
+            border-bottom: solid 0.2rem rgba(0, 0, 0, 0.18);
+            transition: all 0.3s ease;
+
+            &:hover {
+              border-bottom: solid 0.2rem $primary-light-color;
+              padding: 0.5rem 3rem;
+              background-color: rgba(255, 255, 255, 0.07);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: rgba(105, 90, 205, 0);
+    color: $white-color;
+    text-align: center;
+    padding: 3rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 80%;
+    max-width: 600px;
+    min-width: 150px;
+    image-rendering: optimizeSpeed;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+  }
+
+  section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  #games {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+
+    .games-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30rem;
+      box-shadow: 0 0 200px -50px $primary-color;
+
+      .game {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.bloodletting,
+        &.sixtyseconds,
+        &.voxeland {
+          background-position: center;
+          background-size: cover;
+          border-bottom: solid 0.4rem $primary-dark-color;
+          box-shadow: inset 0 -200px 200px -200px rgba(105, 90, 205, 0.5);
+          transition: all 0.3s ease;
+
+          &:hover {
+            width: 150%;
+            box-shadow: inset 0 -300px 300px -300px $accent-color;
+            border-bottom: solid 0.4rem $primary-light-color;
+          }
+        }
+      }
+
+      .hover-desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: $white-color;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        &:hover {
+          opacity: 100%;
+        }
+
+        h2,
+        p {
+          margin: 0;
+          padding: 0;
+          pointer-events: none;
+        }
+
+        h2 {
+          font-size: 4rem;
+        }
+
+        .view-button {
+          background: linear-gradient(
+            90deg,
+            rgba(76, 65, 145, 0.767) 0%,
+            rgba(134, 115, 255, 1) 50%
+          );
+          background-size: 200%;
+          font-size: 1rem;
+          margin-top: 1.5rem;
+          padding: 0.75rem 2rem;
+          border-radius: 10rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: all 0.5s ease;
+
+          p {
+            pointer-events: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          i {
+            pointer-events: none;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+          }
+
+          &:hover {
+            background-position-x: 100%;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white-color;
+    text-align: left;
+    margin: 4rem 0 1rem;
+    background-color: transparent;
+    box-shadow: 0 0 200px -100px rgba(105, 90, 205, 0.5);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 35rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+
+    ul {
+      margin: 0.5rem 0;
+    }
+
+    p {
+      margin: 1rem;
+    }
+
+    .about-title img {
+      width: 20rem;
+    }
+
+    p a {
+      text-decoration: none;
+      color: $accent-color;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .copyright-content {
+    margin: 1rem 0;
+
+    ul {
+      padding: 0 2.5rem;
+
+      li {
+        margin-block: 0.5rem;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Responsive Styles
+  @media screen and (max-width: 768px) {
+    nav ul li a {
+      font-size: 3.5vw;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        font-size: 3.5vw;
+        padding: 0.5rem 2rem;
+      }
+    }
+
+    .hover-desc {
+      h2 {
+        font-size: 10vw;
+      }
+
+      p {
+        font-size: 3.5vw;
+      }
+    }
+
+    footer {
+      font-size: 100%;
+    }
+
+    #games {
+      padding-inline: 0;
+    }
+
+    .about-us {
+      width: 80vw;
+    }
+  }
+
+  @media screen and (max-width: 1170px) {
+    .games-container {
+      flex-direction: column;
+      height: fit-content;
+    }
+
+    .game {
+      height: 20rem;
+    }
+  }
+}
