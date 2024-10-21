@@ -12,23 +12,23 @@ const DynamicHead: React.FC = () => {
     switch (true) {
       case location.pathname === "/voxeland":
         title = "Voxeland - Home";
-        favicon = "/src/assets/img/voxeland/VOXELANDLOGO.png";
+        favicon = "/public/assets/img/voxeland/VOXELANDLOGO.png";
         break;
       case location.pathname === "/voxeland/gameinfo":
         title = "Voxeland - Game Info";
-        favicon = "/src/assets/img/voxeland/VOXELANDLOGO.png";
+        favicon = "/public/assets/img/voxeland/VOXELANDLOGO.png";
         break;
       case location.pathname.startsWith("/voxeland/news"):
         title = "Voxeland - News";
-        favicon = "/src/assets/img/voxeland/VOXELANDLOGO.png";
+        favicon = "/public/assets/img/voxeland/VOXELANDLOGO.png";
         break;
       case location.pathname === "/voxeland/support":
         title = "Voxeland - Support";
-        favicon = "/src/assets/img/voxeland/VOXELANDLOGO.png";
+        favicon = "/public/assets/img/voxeland/VOXELANDLOGO.png";
         break;
       case location.pathname === "/":
         title = "Zeta Studios";
-        favicon = "/src/assets/img/logoSmallZETASTUDIOS.svg";
+        favicon = "/public/assets/img/logoSmallZETASTUDIOS.svg";
         break;
       default:
         title = "NOT FOUND";

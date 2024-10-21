@@ -10,7 +10,7 @@ const Header: React.FC = () => (
         <div className="logo-container">
           <Link to="/">
             <img
-              src="/src/assets/img/logoSmallZETASTUDIOS.svg"
+              src="/public/assets/img/logoSmallZETASTUDIOS.svg"
               alt="Zeta Studios Logo"
               className="logo zetastudios-logo"
             />
@@ -19,7 +19,7 @@ const Header: React.FC = () => (
         <div className="logo-container">
           <Link to="/voxeland">
             <img
-              src="/src/assets/img/voxeland/VOXELANDLOGO.png"
+              src="/public/assets/img/voxeland/VOXELANDLOGO.png"
               alt="Voxeland Logo"
               className="logo voxeland-logo"
             />
