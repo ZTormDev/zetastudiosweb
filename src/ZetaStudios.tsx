@@ -67,7 +67,7 @@ const ZetaStudios: React.FC = () => {
         </div>
         <div className="about-content">
           <p>
-            <b>ZETA STUDIOS</b> is an indie game studio originally founded by{" "}
+            <b>ZETA STUDIOS</b> is an indie game studio originally founded by
             <b>ZTorm</b> from Chile.
           </p>
           <p>Our current members are:</p>
@@ -80,12 +80,19 @@ const ZetaStudios: React.FC = () => {
             </li>
           </ul>
           <p>
-            You can contact us via email at{" "}
+            You can contact us via email at
             <a href="mailto:zetastudiosgames@gmail.com">
+              {" "}
               zetastudiosgames@gmail.com
             </a>{" "}
-            or through Twitter at <a href="">@zetastudios</a>. We also have a{" "}
-            <a href="">Youtube channel</a>.
+            or through Twitter at{" "}
+            <a href="https://x.com/zetastudios_dev">@zetastudios</a>. We also
+            have a
+            <a href="https://www.youtube.com/@zetastudiosdev">
+              {" "}
+              Youtube channel
+            </a>
+            .
           </p>
         </div>
         <div className="copyright-content">
