@@ -1,31 +1,22 @@
-import React, { useEffect, useState } from "react";
 import "./zetastudios-styles.scss";
 import { Link } from "react-router-dom";
+import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
 
-// Define the type for a game object
-interface Game {
-  name: string;
-  description: string;
-  image: string;
-  link: string;
-}
+const Games = [
+  {
+    name: "Voxeland",
+    description: "An Open World Voxel Survival RPG Game",
+    image: "/assets/img/voxeland/voxeland.png",
+    link: "/voxeland",
+  },
+];
 
 const ZetaStudios: React.FC = () => {
-  const [games, setGames] = useState<Game[]>([]);
-
-  // Fetch games data from JSON
-  useEffect(() => {
-    fetch("/games.json")
-      .then((response) => response.json())
-      .then((data) => setGames(data))
-      .catch((error) => console.error("Error loading games:", error));
-  }, []);
-
   return (
     <div className="zetastudios-page page">
       <header>
         <img
-          src="/public/assets/img/logozeta.png"
+          src="/assets/img/logozeta.png"
           alt="Your Video Game Company Logo"
           className="logo"
         />
@@ -51,7 +42,7 @@ const ZetaStudios: React.FC = () => {
       <section id="games">
         <div className="games-container">
           {/* Render games dynamically */}
-          {games.map((game, index) => (
+          {Games.map((game, index) => (
             <div
               key={index}
               className={`game ${game.name.toLowerCase().replace(" ", "")}`}
@@ -61,9 +52,8 @@ const ZetaStudios: React.FC = () => {
                 <h2>{game.name}</h2>
                 <p>{game.description}</p>
                 <Link to={game.link} className="view-button">
-                  <p>
-                    Webpage <i className="fa-solid fa-up-right-from-square"></i>
-                  </p>
+                  <p>WebPage</p>
+                  <LanguageRoundedIcon></LanguageRoundedIcon>
                 </Link>
               </div>
             </div>
@@ -73,7 +63,7 @@ const ZetaStudios: React.FC = () => {
 
       <section className="about-us" id="about-us">
         <div className="about-title">
-          <img src="/public/assets/img/logozeta.png" alt="Zeta Studios Logo" />
+          <img src="/assets/img/logozeta.png" alt="Zeta Studios Logo" />
         </div>
         <div className="about-content">
           <p>

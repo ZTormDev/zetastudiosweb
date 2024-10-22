@@ -10,7 +10,7 @@ const Header: React.FC = () => (
         <div className="logo-container">
           <Link to="/">
             <img
-              src="/public/assets/img/logoSmallZETASTUDIOS.svg"
+              src="/assets/img/logoSmallZETASTUDIOS.svg"
               alt="Zeta Studios Logo"
               className="logo zetastudios-logo"
             />
@@ -19,7 +19,7 @@ const Header: React.FC = () => (
         <div className="logo-container">
           <Link to="/voxeland">
             <img
-              src="/public/assets/img/voxeland/VOXELANDLOGO.png"
+              src="/assets/img/voxeland/VOXELANDLOGO.png"
               alt="Voxeland Logo"
               className="logo voxeland-logo"
             />
@@ -27,12 +27,12 @@ const Header: React.FC = () => (
         </div>
       </div>
       <nav>
-        <a href="/voxeland/gameinfo" className="nav-link">
+        <Link to="/voxeland/gameinfo" className="nav-link">
           GAME INFO
-        </a>
-        <a href="/voxeland/news" className="nav-link">
+        </Link>
+        <Link to="/voxeland/news" className="nav-link">
           NEWS
-        </a>
+        </Link>
         <div className="social-media-container">
           <a href="#" className="nav-link">
             SOCIAL MEDIA <ShareRoundedIcon></ShareRoundedIcon>
@@ -68,9 +68,9 @@ const Header: React.FC = () => (
             </a>
           </div>
         </div>
-        <a href="/voxeland/support" className="nav-link">
+        <Link to="/voxeland/support" className="nav-link">
           SUPPORT
-        </a>
+        </Link>
         <a href="/voxeland#download" className="nav-link">
           DOWNLOAD
         </a>

@@ -55,10 +55,7 @@ const GameInfo: React.FC = () => (
       epic Boss Battles, and More!
     </p>
     <div className="game-screenshot">
-      <img
-        src="/public/assets/img/voxeland/voxeland.png"
-        alt="Voxeland Gameplay"
-      />
+      <img src="/assets/img/voxeland/voxeland.png" alt="Voxeland Gameplay" />
     </div>
   </section>
 );
@@ -107,7 +104,7 @@ const Voxeland: React.FC = () => {
         <section className="hero">
           <video
             className="hero-video"
-            src="/public/assets/video/voxeland/cubeworldpresentation.mp4"
+            src="/assets/video/voxeland/cubeworldpresentation.mp4"
             autoPlay
             loop
             muted

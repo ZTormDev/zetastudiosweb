@@ -10,7 +10,7 @@ const BlogData = [
 
         Integer eu elementum lorem. Quisque vehicula purus sed ligula consequat, eget tincidunt ligula convallis. Duis ultrices, mi sed rhoncus gravida, nunc nisi rutrum turpis, ut ornare mi quam condimentum sem. Etiam finibus est ac elit pretium dignissim. Ut quis dapibus risus. Quisque condimentum sapien nec commodo vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nunc est, aliquam sed consectetur in, molestie eu tellus. Ut nec sapien venenatis nisl pulvinar gravida. Duis dui quam, rhoncus vitae lacinia quis, fringilla sit amet nunc.
         `,
-    imageUrl: "/public/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/cube-world.webp",
   },
   {
     id: "1",
@@ -20,7 +20,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/public/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/cube-world.webp",
   },
   {
     id: "2",
@@ -30,7 +30,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/public/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/cube-world.webp",
   },
   {
     id: "3",
@@ -40,7 +40,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/public/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/cube-world.webp",
   },
   {
     id: "4",
@@ -50,7 +50,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/public/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/cube-world.webp",
   },
 ];
 
