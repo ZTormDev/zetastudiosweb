@@ -1,5 +1,6 @@
 {
   "name": "zeta-studios-web",
+  "homepage": "https://www.zetastudios.net/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
