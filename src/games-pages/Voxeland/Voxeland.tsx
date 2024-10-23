@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import BlogData from "./Pages/blogs/BlogData"; // Importamos los datos de los blogs
 import MoreHorizRoundedIcon from "@mui/icons-material/MoreHorizRounded";
+import GameInfo from "./Components/GameInfo";
 
 // Interfaz para los datos del blog
 interface BlogPostData {
@@ -43,21 +44,6 @@ const BlogPost: React.FC<BlogPostProps> = ({
       <p>{shortContent}</p>
     </div>
   </Link>
-);
-
-const GameInfo: React.FC = () => (
-  <section className="game-info">
-    <h2 className="section-title">What is Voxeland?</h2>
-    <p>
-      Voxeland is an Open World Survival RPG based on Voxels, with Procedural
-      World Generation (Terrain, Structures, NPCs, etc.). You can also play with
-      friends to share unique experiences! Fight against monsters, engage in
-      epic Boss Battles, and More!
-    </p>
-    <div className="game-screenshot">
-      <img src="/assets/img/voxeland/voxeland.png" alt="Voxeland Gameplay" />
-    </div>
-  </section>
 );
 
 interface DownloadSectionProps {

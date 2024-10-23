@@ -1,6 +1,8 @@
 .voxeland-page {
   // Variables
   $primary-color: #50e3c2;
+  $primary-color-light: #83f8df;
+  $primary-color-dark: #174138;
   $secondary-color: #7f5bff;
   $text-color: #333;
   $background-color: #f2f7f8;
@@ -9,16 +11,19 @@
 
   background-color: $background-color;
 
-  // Header
   .header {
-    background-color: $header-footer-color;
-    color: white;
-    padding: 0.8rem 2rem;
-    box-sizing: border-box;
-    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 2rem;
+    display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    color: white;
 
     .social-media-container {
       position: relative;
@@ -34,7 +39,7 @@
         border-top: solid 3px $primary-color;
         width: 100%;
         left: 0;
-        background-color: $header-footer-color-accent;
+        background-color: rgba(255, 255, 255, 1);
         padding: 0.5rem;
         box-sizing: border-box;
         border-radius: 3px;
@@ -43,6 +48,130 @@
         flex-direction: column;
         justify-content: center;
         gap: 0.5rem;
+
+        a {
+          display: block;
+          color: $primary-color-dark;
+          text-decoration: none;
+          padding: 0.6rem 1rem;
+          font-size: 0.9rem;
+          border-radius: 5px;
+          display: flex;
+          font-weight: 600;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          svg {
+            transform: scale(0.8);
+          }
+        }
+      }
+
+      &:hover .social-media-menu {
+        display: flex;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      align-items: center;
+      width: 100%;
+      transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.2;
+    }
+
+    .logos-container {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container {
+      width: 3.2rem;
+      height: 3.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+    }
+
+    nav {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        padding: 0.6rem 1.5rem;
+        border-radius: 5px;
+        transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+        font-weight: 500;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0;
+
+        svg {
+          transform: scale(0.9);
+        }
+
+        &:hover {
+          color: $primary-color;
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+
+    // Cuando se hace scroll, cambiamos el background y reducimos el padding
+    &.scrolled {
+      background-color: $header-footer-color;
+      padding: 0.5rem 2rem;
+
+      .nav-link {
+        &:hover {
+          color: $primary-color;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      .container {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .social-media-menu {
+        background-color: $header-footer-color-accent;
 
         a {
           display: block;
@@ -66,85 +195,6 @@
           }
         }
       }
-
-      &:hover .social-media-menu {
-        display: flex;
-      }
-    }
-
-    .container {
-      display: flex;
-      justify-content: left;
-      gap: 1.5rem;
-      align-items: center;
-      width: 100%;
-    }
-
-    .logos-container {
-      width: auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo-container {
-      width: 3.2rem;
-      height: 3.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: centers;
-      position: relative;
-      border-radius: 50%;
-      overflow: hidden;
-      transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
-    }
-
-    .logo-container:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      height: 80%;
-      object-fit: contain;
-    }
-
-    nav {
-      margin: 0;
-      display: flex;
-      flex-direction: row;
-      gap: 0rem;
-    }
-
-    .nav-link {
-      color: white;
-      text-decoration: none;
-      padding: 0.6rem 1.5rem;
-      border-radius: 5px;
-      transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
-      font-weight: 500;
-      font-size: 1rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-
-      svg {
-        transform: scale(0.9);
-      }
-
-      &:hover {
-        color: $primary-color;
-        background-color: rgba(255, 255, 255, 0.1);
-      }
     }
   }
 
@@ -152,7 +202,7 @@
   .hero {
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 600px;
     text-align: center;
     color: white;
     width: 100%;
@@ -231,18 +281,25 @@
   // Game info
   .game-info {
     margin-bottom: 3rem;
-    width: 40rem;
+    width: 50rem;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .game-screenshot {
+    .game-trailer {
       margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      box-sizing: border-box;
 
-      img {
-        max-width: 100%;
-        border-radius: 10px;
+      iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
       }
     }
   }
