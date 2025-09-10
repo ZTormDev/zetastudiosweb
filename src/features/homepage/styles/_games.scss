@@ -1,0 +1,95 @@
+// Games Section
+.homepage-games {
+  padding: var(--space-24) 0;
+  background-color: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+
+  // Diagonal decoration
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      var(--brand-primary) 0%,
+      transparent 30%
+    );
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--brand-primary);
+      margin: var(--space-6) auto 0;
+      border-radius: var(--border-radius-full);
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media (min-width: 768px) {
+      font-size: var(--font-size-5xl);
+    }
+  }
+
+  &__description {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--space-8);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__card-container {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  &__card {
+    min-height: 320px;
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transform: translateY(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+  }
+}

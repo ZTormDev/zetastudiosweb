@@ -1,0 +1,12 @@
+// ==========================================
+// Global Styles Entry Point
+// ==========================================
+
+@use "./variables";
+@use "./base";
+@use "./components";
+@use "./modal";
+
+// Feature-specific styles
+@use "../../features/homepage/styles/homepage";
+@use "../../features/games/voxeland/styles/voxeland";

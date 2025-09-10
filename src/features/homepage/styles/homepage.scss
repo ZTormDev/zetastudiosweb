@@ -1,0 +1,15 @@
+// ==========================================
+// Homepage Styles
+// ==========================================
+
+// Import section partials
+@use "./header";
+@use "./games";
+@use "./about";
+@use "./footer";
+
+.homepage {
+  &__main {
+    flex: 1;
+  }
+}

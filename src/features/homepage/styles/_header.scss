@@ -1,0 +1,368 @@
+// Header as Hero
+.homepage-header {
+  position: relative;
+  width: 100%;
+  color: var(--color-white);
+
+  // Overlay/Fixed navbar
+  &__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+    padding: var(--space-3) 0;
+    background: rgba(13, 13, 15, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+
+    &.scrolled {
+      background: rgba(13, 13, 15, 0.75);
+      padding: var(--space-2) 0;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+
+  // Mobile menu button
+  &__mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-white);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      span:first-child {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:last-child {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__logo-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  &__brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin-top: -3px;
+  }
+
+  &__brand-mini {
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.95;
+  }
+
+  &__nav {
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background: rgba(13, 13, 15, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 80px 20px 30px;
+      overflow-y: auto;
+      transition: right 0.3s ease;
+      z-index: 5;
+
+      &.open {
+        right: 0;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: var(--space-6);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: var(--space-6);
+      align-items: flex-start;
+    }
+  }
+
+  &__nav-item {
+    margin: 0;
+    position: relative;
+  }
+
+  &__nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color var(--transition-fast);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--brand-primary);
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--brand-secondary);
+      text-decoration: none;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  // Hero area behind navbar
+  &__hero {
+    position: relative;
+    height: 90vh;
+    min-height: 640px;
+    display: grid;
+    place-items: center;
+    padding-top: 80px; // allow space under fixed navbar
+    background: radial-gradient(
+        1200px 800px at 10% 10%,
+        rgba(98, 0, 255, 0.25),
+        transparent 60%
+      ),
+      radial-gradient(
+        1000px 800px at 90% 20%,
+        rgba(0, 180, 255, 0.2),
+        transparent 60%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(10, 10, 14, 0.95) 0%,
+        rgba(10, 10, 14, 0.7) 40%,
+        rgba(10, 10, 14, 0.95) 100%
+      );
+    overflow: hidden;
+
+    // subtle decorative grid
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.04) 1px,
+          transparent 1px
+        ),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px, 40px 40px;
+      mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+      pointer-events: none;
+    }
+  }
+
+  &__hero-content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    animation: fadeUp 0.8s ease-out both;
+  }
+
+  &__hero-title-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+  }
+
+  &__hero-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 0;
+    margin-top: -10px;
+  }
+
+  &__hero-logo {
+    width: min(200px, 24vw);
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.6));
+  }
+
+  &__hero-title {
+    margin: 0;
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1;
+    background: linear-gradient(90deg, #ffffff, #d5d5ff 40%, #b9a6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0); // disable default shadow for gradient text
+  }
+
+  &__hero-slogan {
+    margin: 0;
+    font-size: clamp(1rem, 2.4vw, 1.35rem);
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+  }
+
+  &__hero-slogan-part {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: wordAppearLoop 8s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+
+    // Synchronized timing for all words
+    &:nth-child(1) {
+      animation-delay: 0s;
+    } // "Built"
+    &:nth-child(2) {
+      animation-delay: 0.5s;
+    } // "for"
+    &:nth-child(4) {
+      animation-delay: 1.5s;
+    } // ","
+    &:nth-child(5) {
+      animation-delay: 1.5s;
+    } // "by"
+    &:nth-child(7) {
+      animation-delay: 2s;
+    } // "."
+  }
+
+  &__hero-slogan-highlight {
+    opacity: 0;
+    transform: translateY(20px);
+    position: relative;
+    font-weight: 600;
+    color: rgb(202, 161, 255);
+    text-shadow: 0 0 10px rgba(202, 161, 255, 0.6),
+      0 0 20px rgba(202, 161, 255, 0.4), 0 0 30px rgba(202, 161, 255, 0.2);
+    animation: wordAppearLoop 8s cubic-bezier(0.075, 0.82, 0.165, 1) infinite,
+      purpleGlow 1.2s ease-in-out infinite alternate;
+
+    // Synchronized timing with other words
+    &:nth-child(3) {
+      animation-delay: 1s;
+    } // "players" 1
+    &:nth-child(6) {
+      animation-delay: 2s;
+    } // "players" 2
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wordAppearLoop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  65% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(5px); /* fadeBottomOut effect - synchronized */
+  }
+}
+
+@keyframes purpleGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(170, 102, 255, 0.5),
+      0 0 8px rgba(170, 102, 255, 0.3), 0 0 10px rgba(170, 102, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(170, 102, 255, 0.8),
+      0 0 22px rgba(170, 102, 255, 0.6), 0 0 30px rgba(170, 102, 255, 0.4),
+      0 0 38px rgba(170, 102, 255, 0.2);
+  }
+}
