@@ -423,7 +423,7 @@ export const GameInfoPage: React.FC = () => {
                 </p>
                 <div className="download-stats">
                   <div className="stat">
-                    <span className="stat-number">50K+</span>
+                    <span className="stat-number">2K+</span>
                     <span className="stat-label">Active Players</span>
                   </div>
                   <div className="stat">
@@ -431,7 +431,7 @@ export const GameInfoPage: React.FC = () => {
                     <span className="stat-label">User Rating</span>
                   </div>
                   <div className="stat">
-                    <span className="stat-number">1M+</span>
+                    <span className="stat-number">10k+</span>
                     <span className="stat-label">Downloads</span>
                   </div>
                 </div>

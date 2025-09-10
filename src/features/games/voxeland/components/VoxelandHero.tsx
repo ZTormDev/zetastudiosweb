@@ -223,7 +223,7 @@ export const VoxelandHero: React.FC<VoxelandHeroProps> = ({
             transition={{ duration: 1, delay: 1 }}
           >
             <div className="voxeland-hero__stat">
-              <span className="voxeland-hero__stat-number">10K+</span>
+              <span className="voxeland-hero__stat-number">2K+</span>
               <span className="voxeland-hero__stat-label">Players</span>
             </div>
             <div className="voxeland-hero__stat">
