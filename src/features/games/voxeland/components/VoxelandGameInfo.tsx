@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import {
@@ -23,6 +23,19 @@ interface VoxelandGameInfoProps {
 export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
   const navigate = useNavigate();
 
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  useEffect(() => {
+    try {
+      const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+      setPrefersReducedMotion(mq.matches);
+      const onChange = () => setPrefersReducedMotion(mq.matches);
+      mq.addEventListener?.("change", onChange);
+      return () => mq.removeEventListener?.("change", onChange);
+    } catch {
+      // ignore
+    }
+  }, []);
+
   useEffect(() => {
     // Initialize AOS when component mounts
     import("aos").then((AOS) => {
@@ -43,9 +56,15 @@ export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
         {/* Hero Info Section */}
         <motion.div
           className="voxeland-game-info__hero"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={
+            prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+          }
+          whileInView={
+            prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
+          }
+          transition={
+            prefersReducedMotion ? { duration: 0 } : { duration: 0.8 }
+          }
           viewport={{ once: true }}
         >
           <div className="voxeland-game-info__hero-content">
@@ -70,6 +89,7 @@ export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
               src="/assets/img/voxeland/cube-world.webp"
               alt="Voxeland Gameplay"
               className="hero-image"
+              loading="lazy"
             />
             <div className="image-glow"></div>
           </div>
@@ -88,14 +108,25 @@ export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
                 <motion.div
                   key={index}
                   className="voxeland-game-info__feature-card"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={
+                    prefersReducedMotion
+                      ? { opacity: 1, y: 0 }
+                      : { opacity: 0, y: 30 }
+                  }
+                  whileInView={
+                    prefersReducedMotion
+                      ? { opacity: 1, y: 0 }
+                      : { opacity: 1, y: 0 }
+                  }
+                  transition={
+                    prefersReducedMotion
+                      ? { duration: 0 }
+                      : { duration: 0.6, delay: index * 0.1 }
+                  }
                   viewport={{ once: true }}
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 20px 40px rgba(74, 144, 226, 0.3)",
-                  }}
+                  whileHover={
+                    prefersReducedMotion ? undefined : { scale: 1.03 }
+                  }
                 >
                   <div className="feature-icon">
                     <IconComponent />
@@ -214,20 +245,23 @@ export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
         {/* More Info Button */}
         <motion.div
           className="voxeland-game-info__more-info-section"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={
+            prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
+          whileInView={
+            prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
+          }
+          transition={
+            prefersReducedMotion ? { duration: 0 } : { duration: 0.8 }
+          }
           viewport={{ once: true }}
           data-aos="fade-up"
         >
           <motion.button
             className="voxeland-game-info__more-info-btn"
             onClick={() => navigate("gameinfo")}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 15px 30px rgba(74, 144, 226, 0.4)",
-            }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={prefersReducedMotion ? undefined : { scale: 1.03 }}
+            whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
           >
             <FaInfoCircle className="btn-icon" />
             <span>View Complete Information</span>

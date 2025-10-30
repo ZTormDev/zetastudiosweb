@@ -143,6 +143,7 @@ export const GameInfoPage: React.FC = () => {
                     src={game.screenshots[0]}
                     alt={`${game.name} screenshot`}
                     className="gameinfo-hero__image"
+                    loading="lazy"
                   />
                   <div className="gameinfo-hero__glow"></div>
                 </div>
@@ -332,6 +333,7 @@ export const GameInfoPage: React.FC = () => {
                       src={screenshot}
                       alt={`${game.name} screenshot ${index + 1}`}
                       className="gallery-item__image"
+                      loading="lazy"
                     />
                     <div className="gallery-item__overlay">
                       <div className="gallery-item__zoom">🔍</div>
@@ -391,6 +393,7 @@ export const GameInfoPage: React.FC = () => {
                         poster={game.screenshots[0]}
                         controls
                         muted
+                        preload="metadata"
                       >
                         <source src={game.trailerUrl} type="video/mp4" />
                         Your browser does not support the video tag.
