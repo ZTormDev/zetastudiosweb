@@ -8,26 +8,23 @@ export const GAMES_CONFIG: Record<string, Game> = {
     description:
       "An Open World Voxel-Based Survival RPG where you can build, explore, and survive in a procedurally generated world.",
     shortDescription: "An Open World Voxel Survival RPG Game",
-    image: "/assets/img/voxeland/voxeland-screenshot.png",
-    backgroundImage: "/assets/img/voxeland/backgroundpattern.png",
-    logo: "/assets/img/voxeland/voxeland.svg",
+    image: "/assets/img/voxeland/voxeland-sunrise.png",
+    logo: "/assets/img/logos/voxeland-letter.png",
     status: "development",
     platforms: ["windows"],
     genre: ["RPG", "Survival", "Open World", "Voxel"],
-    downloadLink:
-      "https://drive.google.com/file/d/1Q30IMyfw1bbIwel6axFutqDPP812oqKi/view?usp=sharing",
-    trailerUrl: "https://www.youtube.com/watch?v=f4s2jdV7_dA",
+    downloadLink: "https://i.imgur.com/pKULtB1.png",
+    trailerUrl: "https://i.imgur.com/pKULtB1.png",
     screenshots: [
-      "/assets/img/voxeland/cube-world.webp",
-      "/assets/img/voxeland/voxeland-screenshot.png",
+      "/assets/img/voxeland/voxeland-day.png",
+      "/assets/img/voxeland/voxeland-night.png",
+      "/assets/img/voxeland/voxeland-sunrise.png",
     ],
     features: [
       "Procedurally generated infinite worlds",
       "Voxel-based building system",
       "Survival mechanics",
       "RPG progression system",
-      "Crafting and resource management",
-      "Day/night cycle",
     ],
     systemRequirements: {
       minimum: {

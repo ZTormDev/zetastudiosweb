@@ -75,18 +75,10 @@ export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
             <p className="voxeland-game-info__description">
               {game.description}
             </p>
-            <div className="voxeland-game-info__rating">
-              <div className="rating-stars">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="star filled" />
-                ))}
-              </div>
-              <span className="rating-text">4.8/5 - Excellent rating</span>
-            </div>
           </div>
           <div className="voxeland-game-info__hero-image">
             <img
-              src="/assets/img/voxeland/cube-world.webp"
+              src="/assets/img/voxeland/voxeland-gameplay.png"
               alt="Voxeland Gameplay"
               className="hero-image"
               loading="lazy"
@@ -108,25 +100,6 @@ export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
                 <motion.div
                   key={index}
                   className="voxeland-game-info__feature-card"
-                  initial={
-                    prefersReducedMotion
-                      ? { opacity: 1, y: 0 }
-                      : { opacity: 0, y: 30 }
-                  }
-                  whileInView={
-                    prefersReducedMotion
-                      ? { opacity: 1, y: 0 }
-                      : { opacity: 1, y: 0 }
-                  }
-                  transition={
-                    prefersReducedMotion
-                      ? { duration: 0 }
-                      : { duration: 0.6, delay: index * 0.1 }
-                  }
-                  viewport={{ once: true }}
-                  whileHover={
-                    prefersReducedMotion ? undefined : { scale: 1.03 }
-                  }
                 >
                   <div className="feature-icon">
                     <IconComponent />
@@ -260,8 +233,6 @@ export const VoxelandGameInfo: React.FC<VoxelandGameInfoProps> = ({ game }) => {
           <motion.button
             className="voxeland-game-info__more-info-btn"
             onClick={() => navigate("gameinfo")}
-            whileHover={prefersReducedMotion ? undefined : { scale: 1.03 }}
-            whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
           >
             <FaInfoCircle className="btn-icon" />
             <span>View Complete Information</span>

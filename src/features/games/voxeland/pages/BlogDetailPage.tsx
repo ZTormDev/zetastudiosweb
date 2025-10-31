@@ -128,24 +128,6 @@ export const BlogDetailPage: React.FC = () => {
                     </Button>
                   </div>
                 </div>
-
-                <div className="blog-sidebar__section">
-                  <h3>Quick Navigation</h3>
-                  <nav className="quick-nav">
-                    <Link to="/voxeland" className="quick-nav__link">
-                      Game Overview
-                    </Link>
-                    <Link to="/voxeland/gameinfo" className="quick-nav__link">
-                      Game Information
-                    </Link>
-                    <Link to="/voxeland/news" className="quick-nav__link">
-                      All News
-                    </Link>
-                    <Link to="/voxeland/support" className="quick-nav__link">
-                      Support
-                    </Link>
-                  </nav>
-                </div>
               </aside>
             </div>
           </div>

@@ -19,29 +19,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
-  }
-
-  &:hover::before {
-    width: 300%;
-    height: 300%;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.4);
-  }
-
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
@@ -68,34 +45,16 @@
   &--primary {
     background-color: var(--brand-primary);
     color: var(--color-white);
-    box-shadow: 0 4px 14px rgba(107, 70, 193, 0.4);
 
     &:hover {
-      background-color: var(--brand-secondary);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(107, 70, 193, 0.6);
       text-decoration: none;
-    }
-
-    &:active {
-      transform: translateY(1px);
-      box-shadow: 0 2px 10px rgba(107, 70, 193, 0.4);
+      color: var(--color-white);
     }
   }
 
   &--secondary {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
-
-    &:hover {
-      background-color: var(--color-gray-700);
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-
-    &:active {
-      transform: translateY(1px);
-    }
   }
 
   &--outline {

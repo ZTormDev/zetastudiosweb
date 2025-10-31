@@ -224,7 +224,7 @@ export const VoxelandHero: React.FC<VoxelandHeroProps> = ({
         ) : (
           <div className="voxeland-hero__video-poster">
             <img
-              src={game.image || "/assets/img/voxeland/voxeland-screenshot.png"}
+              src="/assets/img/voxeland/voxeland-day.png"
               alt={`${game.name} poster`}
               loading="lazy"
             />
@@ -276,7 +276,7 @@ export const VoxelandHero: React.FC<VoxelandHeroProps> = ({
                   : { duration: 1.2, delay: 0.2 }
               }
             >
-              <span className="voxeland-hero__title-main">{game.name}</span>
+              <img src="/assets/img/logos/voxeland.png" alt="" />
             </motion.h1>
 
             <motion.p
@@ -299,38 +299,6 @@ export const VoxelandHero: React.FC<VoxelandHeroProps> = ({
             >
               {game.description}
             </motion.p>
-
-            <motion.div
-              className="voxeland-hero__features"
-              initial={
-                prefersReducedMotion
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 30 }
-              }
-              animate={
-                prefersReducedMotion
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 1, y: 0 }
-              }
-              transition={
-                prefersReducedMotion
-                  ? { duration: 0 }
-                  : { duration: 1, delay: 0.6 }
-              }
-            >
-              <div className="voxeland-hero__feature">
-                <FaGamepad />
-                <span>Infinite Adventure</span>
-              </div>
-              <div className="voxeland-hero__feature">
-                <FaPlay />
-                <span>3D Voxel World</span>
-              </div>
-              <div className="voxeland-hero__feature">
-                <FaSteam />
-                <span>Multiplayer</span>
-              </div>
-            </motion.div>
           </motion.div>
 
           <motion.div
@@ -373,34 +341,6 @@ export const VoxelandHero: React.FC<VoxelandHeroProps> = ({
                 )}
               </>
             )}
-          </motion.div>
-
-          <motion.div
-            className="voxeland-hero__stats"
-            initial={
-              prefersReducedMotion
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 30 }
-            }
-            animate={
-              prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
-            }
-            transition={
-              prefersReducedMotion ? { duration: 0 } : { duration: 1, delay: 1 }
-            }
-          >
-            <div className="voxeland-hero__stat">
-              <span className="voxeland-hero__stat-number">2K+</span>
-              <span className="voxeland-hero__stat-label">Players</span>
-            </div>
-            <div className="voxeland-hero__stat">
-              <span className="voxeland-hero__stat-number">4.8★</span>
-              <span className="voxeland-hero__stat-label">Rating</span>
-            </div>
-            <div className="voxeland-hero__stat">
-              <span className="voxeland-hero__stat-number">Free</span>
-              <span className="voxeland-hero__stat-label">Price</span>
-            </div>
           </motion.div>
         </div>
       </div>

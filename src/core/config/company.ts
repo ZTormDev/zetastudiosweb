@@ -5,7 +5,7 @@ export const COMPANY_CONFIG: CompanyConfig = {
   namePart1: "ZETA",
   namePart2: "STUDIOS",
   slogan: "Built for players, by players.",
-  logo: "/assets/img/zetastudios.svg",
+  logo: "/assets/img/logos/zetastudios.png",
   foundedBy: "ZTorm",
   foundedYear: 2023,
   location: "Chile",

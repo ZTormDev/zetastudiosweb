@@ -1,0 +1,19 @@
+// ==========================================
+// Custom Fonts
+// ==========================================
+
+// Note: place your Lilian.ttf in the public assets folder: /public/assets/Lilian.ttf
+// It will be served at the runtime path: /assets/Lilian.ttf
+
+@font-face {
+  font-family: "Lilian";
+  src: url("/assets/Lilian.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-lilian: "Lilian", var(--font-family-primary);
+  --font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI";
+}

@@ -31,7 +31,7 @@ export const GameHeader: React.FC<GameHeaderProps> = ({ gameSlug }) => {
         <div className="game-header__logos">
           <Link to="/" className="game-header__logo-link">
             <img
-              src="/assets/img/zetastudios.svg"
+              src="/assets/img/logos/zetastudios.png"
               alt={`${COMPANY_CONFIG.name} Logo`}
               className="game-header__studio-logo"
             />

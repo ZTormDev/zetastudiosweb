@@ -16,7 +16,7 @@ export const VOXELAND_BLOG_DATA: BlogPost[] = [
 
       Integer eu elementum lorem. Quisque vehicula purus sed ligula consequat, eget tincidunt ligula convallis. Duis ultrices, mi sed rhoncus gravida, nunc nisi rutrum turpis, ut ornare mi quam condimentum sem. Etiam finibus est ac elit pretium dignissim. Ut quis dapibus risus. Quisque condimentum sapien nec commodo vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nunc est, aliquam sed consectetur in, molestie eu tellus. Ut nec sapien venenatis nisl pulvinar gravida. Duis dui quam, rhoncus vitae lacinia quis, fringilla sit amet nunc.
     `,
-    imageUrl: "/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/voxeland-development.png",
   },
   {
     id: "1",
@@ -30,7 +30,7 @@ export const VOXELAND_BLOG_DATA: BlogPost[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/voxeland-development.png",
   },
   {
     id: "2",
@@ -44,7 +44,7 @@ export const VOXELAND_BLOG_DATA: BlogPost[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/voxeland-development.png",
   },
   {
     id: "3",
@@ -58,7 +58,7 @@ export const VOXELAND_BLOG_DATA: BlogPost[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/voxeland-development.png",
   },
   {
     id: "4",
@@ -72,7 +72,7 @@ export const VOXELAND_BLOG_DATA: BlogPost[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel dapibus tortor, ut vestibulum massa.",
-    imageUrl: "/assets/img/voxeland/cube-world.webp",
+    imageUrl: "/assets/img/voxeland/voxeland-development.png",
   },
 ];
 
