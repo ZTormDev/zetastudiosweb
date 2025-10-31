@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FaPlay, FaDownload, FaSteam, FaGamepad } from "react-icons/fa";
+import { FaPlay, FaDownload } from "react-icons/fa";
 import { Button, MediaGalleryModal } from "../../../../shared/components";
 import { useMediaGallery } from "../../../../core/hooks";
 import { isYouTubeUrl, getYouTubeVideoId } from "../../../../core/utils";
