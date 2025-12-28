@@ -4,7 +4,7 @@
 
 :root {
   // Brand colors
-  --brand-primary: #6b46c1; // Purple
+  --brand-primary: #984bfc; // Purple
   --brand-secondary: #9f7aea; // Lighter purple
   --brand-accent: #e9d8fd; // Very light purple
   --brand-success: #2ecc71;
@@ -15,11 +15,7 @@
   --primary-color: #00d4ff; // Bright aqua
   --secondary-color: #00a8cc; // Deeper aqua
   --accent-color: #00e6ff; // Light aqua
-  --aqua-gradient: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  --aqua-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 
   // Neutral colors
   --color-white: #ffffff;
@@ -48,8 +44,7 @@
   --text-inverse: var(--color-white);
 
   // Typography
-  --font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    system-ui, sans-serif;
+  --font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   --font-family-heading: "Poppins", var(--font-family-primary);
   --font-family-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
 
@@ -105,12 +100,9 @@
   // Shadows
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
   // Transitions
@@ -128,11 +120,11 @@
   --z-tooltip: 1070;
 
   // Container widths
-  --container-sm: 640px;
-  --container-md: 768px;
-  --container-lg: 1024px;
-  --container-xl: 1280px;
-  --container-2xl: 1536px;
+  --container-sm: 540px;
+  --container-md: 660px;
+  --container-lg: 900px;
+  --container-xl: 1080px;
+  --container-2xl: 1380px;
 
   // Breakpoints
   --breakpoint-sm: 640px;

@@ -1,10 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { getAllGames } from "../../../core/config/games";
 import { GameCard } from "../../../shared/components";
 
 export const GamesSection: React.FC = () => {
-  const games = getAllGames();
+  const games = [
+    {
+      id: 1,
+      name: "Voxeland",
+      shortDescription: "A voxel-based sandbox game where players can create and explore their own world.",
+      image: "/assets/img/voxeland/voxeland-day.png",
+      slug: "https://voxeland.zetastudios.net",
+    },
+  ];
 
   if (games.length === 0) {
     return null;
@@ -47,19 +54,12 @@ export const GamesSection: React.FC = () => {
           <motion.h2 className="homepage-games__title" variants={itemVariants}>
             Our Games
           </motion.h2>
-          <motion.p
-            className="homepage-games__description"
-            variants={itemVariants}
-          >
-            Discover our latest gaming experiences and join our growing
-            community.
+          <motion.p className="homepage-games__description" variants={itemVariants}>
+            Discover our latest gaming experiences and join our growing community.
           </motion.p>
         </motion.div>
 
-        <motion.div
-          className="homepage-games__grid"
-          variants={containerVariants}
-        >
+        <motion.div className="homepage-games__grid" variants={containerVariants}>
           {games.map((game) => (
             <motion.div
               key={game.id}

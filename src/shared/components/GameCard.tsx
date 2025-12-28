@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Game } from "../../core/types";
 
 interface GameCardProps {
@@ -8,24 +7,23 @@ interface GameCardProps {
   className?: string;
 }
 
-export const GameCard: React.FC<GameCardProps> = ({
-  game,
-  showDescription = true,
-  className = "",
-}) => {
+export const GameCard: React.FC<GameCardProps> = ({ game, showDescription = true, className = "" }) => {
+  const handleClick = () => {
+    window.location.href = game.slug;
+  };
+
   return (
     <div
       className={`game-card ${className}`}
-      style={{ backgroundImage: `url(${game.image})` }}
+      style={{ backgroundImage: `url(${game.image})`, cursor: "pointer" }}
+      onClick={handleClick}
     >
       <div className="game-card__overlay">
         <div className="game-card__content">
           <h2 className="game-card__title">{game.name}</h2>
-          {showDescription && (
-            <p className="game-card__description">{game.shortDescription}</p>
-          )}
+          {showDescription && <p className="game-card__description">{game.shortDescription}</p>}
           <div className="game-card__actions">
-            <Link to={`/${game.slug}`} className="game-card__link">
+            <button className="game-card__link">
               <span>Visit Page</span>
               <svg
                 width="20"
@@ -41,7 +39,7 @@ export const GameCard: React.FC<GameCardProps> = ({
                 <polyline points="15,3 21,3 21,9" />
                 <line x1="10" y1="14" x2="21" y2="3" />
               </svg>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
