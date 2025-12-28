@@ -5,7 +5,7 @@ import { GameCard } from "../../../shared/components";
 export const GamesSection: React.FC = () => {
   const games = [
     {
-      id: 1,
+      id: "1",
       name: "Voxeland",
       shortDescription: "A voxel-based sandbox game where players can create and explore their own world.",
       image: "/assets/img/voxeland/voxeland-day.png",
