@@ -2,26 +2,30 @@ import React from "react";
 import { Game } from "../../core/types";
 
 interface GameCardProps {
-  game: Game;
+  game: Partial<Game>;
   showDescription?: boolean;
   className?: string;
 }
 
 export const GameCard: React.FC<GameCardProps> = ({ game, showDescription = true, className = "" }) => {
   const handleClick = () => {
-    window.location.href = game.slug;
+    if (game.slug) {
+      window.location.href = game.slug;
+    }
   };
 
   return (
     <div
       className={`game-card ${className}`}
-      style={{ backgroundImage: `url(${game.image})`, cursor: "pointer" }}
+      style={{ backgroundImage: `url(${game.image ?? ""})`, cursor: game.slug ? "pointer" : "default" }}
       onClick={handleClick}
     >
       <div className="game-card__overlay">
         <div className="game-card__content">
-          <h2 className="game-card__title">{game.name}</h2>
-          {showDescription && <p className="game-card__description">{game.shortDescription}</p>}
+          <h2 className="game-card__title">{game.name ?? "Untitled"}</h2>
+          {showDescription && game.shortDescription && (
+            <p className="game-card__description">{game.shortDescription}</p>
+          )}
           <div className="game-card__actions">
             <button className="game-card__link">
               <span>Visit Page</span>
